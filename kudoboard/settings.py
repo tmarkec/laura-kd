@@ -29,7 +29,10 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "DEVELOPMENT" in os.environ
 
-ALLOWED_HOSTS = ["https://vigilant-guacamole-q5w59qgv9qwfxrj5-8000.app.github.dev/"]
+ALLOWED_HOSTS = [
+    "localhost",
+    "https://vigilant-guacamole-q5w59qgv9qwfxrj5-8000.app.github.dev/",
+]
 
 
 # Application definition
