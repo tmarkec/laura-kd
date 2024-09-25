@@ -1,0 +1,9 @@
+h1 {
+    color: red;
+}
+
+.board {
+    background-color: red;
+    width: 500px;
+    height: 500px;
+}
