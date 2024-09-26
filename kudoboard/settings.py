@@ -28,14 +28,19 @@ if os.path.exists("env.py"):
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+# SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = 'KM123'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = "DEVELOPMENT" in os.environ
+
+DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = True
+
 
 ALLOWED_HOSTS = [
-    "localhost",
-    "https://vigilant-guacamole-q5w59qgv9qwfxrj5-8000.app.github.dev/",
+    'https://vigilant-guacamole-q5w59qgv9qwfxrj5-8000.app.github.dev/',
+    'localhost'
+
 ]
 
 
