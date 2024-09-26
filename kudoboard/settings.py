@@ -58,8 +58,13 @@ INSTALLED_APPS = [
     "post",
     # Other
     "cloudinary",
+    'crispy_forms',
+    'crispy_bootstrap5',
     # "cloudinary_storage",
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -147,6 +152,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 # Cloudinary Settings
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 CLOUIDNARY_URL = os.environ.get("CLOUDINARY_URL")
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+from cloudinary.models import CloudinaryField
 
 from django.db import models
 
@@ -11,17 +11,23 @@ class Post(models.Model):
     """
     Creates card posts for board
     """
+    COLOR_CHOICES = [
+        
+        ('#FBD1A2', 'Sunset'),  
+        ('#7DCFB6', 'Tiffany Blue'),
+        ('#C2AFF0', 'Mauve'),
+        ('#E8F7EE', 'Honey Dew'),
+        ('#EFCA08', 'Jonquil'),
+        ('#00A6A6', 'Light Sea Green'),
+        ('#FF4B3E', 'Tomatoe'),
+    ]
+
 
     author_name = models.CharField(max_length=80)
     body = models.TextField(null=False, blank=False)
-    image = ResizedImageField(
-        size=[400, None],
-        quality=75,
-        upload_to="laura_board_posts/",
-        force_format="WEBP",
-        default="",
-    )
+    image = CloudinaryField('image', default="placeholder")
     posted_date = models.DateTimeField(auto_now=True)
+    color = models.CharField(max_length=20, choices=COLOR_CHOICES, default='Sunset')
 
     class Meta:
         ordering = ["-posted_date"]
