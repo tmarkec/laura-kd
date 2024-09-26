@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Fredoka:wght@300..700&family=Sofadi+One&display=swap');
+/* Font families
+
+font-family: "Fredoka", sans-serif;
+
+font-family: "Sofadi One", system-ui;
+
+font-family: "Dancing Script", cursive;
+
+*/
+
+
+/* Header styling */
+
+header {
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    text-align: center;
+}
+
+h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+}
+
+h2 {
+    
+    font-family: "Sofadi One", system-ui;
+}
+
+.add-btn {
+    font-size: 1.3rem;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    padding: .7em;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 82);
+    color: #fff;
+}
+
+
+/* board styling */
+
+main::before {
+    content: "";
+    background-image: url(../images/wp5528871-poop-emoji-phone-wallpapers.jpg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+    z-index: -1;
+}
