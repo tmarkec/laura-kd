@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+from pathlib import Path
 import os
 # import dj_database_url
 
@@ -33,8 +33,8 @@ SECRET_KEY = 'KM123'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = 'DEVELOPMENT' in os.environ
-# DEBUG = True
+# DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 
 ALLOWED_HOSTS = [
@@ -55,9 +55,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Apps
     "home",
+    "post",
     # Other
     "cloudinary",
-    "cloudinary_storage",
+    # "cloudinary_storage",
 ]
 
 MIDDLEWARE = [
@@ -151,3 +152,10 @@ CLOUIDNARY_URL = os.environ.get("CLOUDINARY_URL")
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+#csrf tokens
+CSRF_TRUSTED_ORIGINS = [
+    'https://localhost:8000',
+    'https://vigilant-guacamole-q5w59qgv9qwfxrj5-8000.app.github.dev', 
+]
