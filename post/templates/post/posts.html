@@ -23,7 +23,10 @@
                 </div>
             </div>
         {% empty %}
-            <p>No posts available.</p>
+        <div class="d-flex justify-content-center align-items-center">
+            <h3 class="text-center">Be the first to post and show Laura some love</h3>
+            <iconify-icon icon="openmoji:red-heart" class="display-1 "></iconify-icon>
+        </div>
         {% endfor %}
     </div>
     <audio id="sound" src="/static/sound/boo.mp3"></audio>

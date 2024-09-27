@@ -8,8 +8,18 @@ font-family: "Sofadi One", system-ui;
 font-family: "Dancing Script", cursive;
 
 */
+
+
+/* General styling */
+
 body {
     overflow-x: hidden;
+}
+
+h3 {
+    font-size: 2.3rem;
+    font-family: "Fredoka", sans-serif;
+    text-shadow: 3px 0 3px #FFF;
 }
 
 /* Header styling */
