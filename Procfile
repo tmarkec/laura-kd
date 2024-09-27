@@ -1,1 +1,1 @@
-web: gunicorn lauras-kudoboard.wsgi
+web: gunicorn kudoboard.wsgi
