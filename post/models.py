@@ -4,8 +4,6 @@ from cloudinary.models import CloudinaryField
 
 from django.db import models
 
-from django_resized import ResizedImageField
-
 
 class Post(models.Model):
     """
