@@ -39,7 +39,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'https://vigilant-guacamole-q5w59qgv9qwfxrj5-8000.app.github.dev/',
-    'localhost'
+    'localhost',
+    '.herokuapp.com'
 
 ]
 
