@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block content %}
-<div class="container-fluid board">
-    <div class="row">
+<div class="container-fluid board mt-4">
+    <div class="row mt-1">
         {% for post in posts %}
             <div class="col-md-4">
-                <div class="card mb-4 p-md-3 rounded">
+                <div class="card mb-2 p-md-3 rounded" style="background-color: {{ post.color }};">
                     <div class="card-body">
                         <div class="image-container">
                             {% if post.image %}
@@ -16,8 +16,9 @@
                             {% endif %}
                         </div>  
                         <p class="card-text">{{ post.body }}</p>
-                        <p class="author">By {{ post.author_name }}</p>
-                        <p class="date">{{ post.posted_date }}</p>
+                        <!-- <p class="author">By {{ post.author_name }}</p> -->
+                        <p><small class="text-muted">Author: <strong>{{ post.author_name }} </strong>| {{ post.posted_date }}</small></p>
+                        <!-- <p class="date">{{ post.posted_date }}</p> -->
                     </div>
                 </div>
             </div>
@@ -25,5 +26,12 @@
             <p>No posts available.</p>
         {% endfor %}
     </div>
+    <audio id="sound" src="/static/sound/boo.mp3"></audio>
+    <script>
+        // Play the sound if the flag is set
+        {% if play_sound %}
+            document.getElementById('sound').play();
+        {% endif %}
+    </script>
 </div>
 {% endblock %}
