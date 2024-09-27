@@ -58,10 +58,11 @@ INSTALLED_APPS = [
     "home",
     "post",
     # Other
-    "cloudinary",
     'crispy_forms',
     'crispy_bootstrap5',
     # "cloudinary_storage",
+    "cloudinary",
+    "cloudinary_storage",
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
